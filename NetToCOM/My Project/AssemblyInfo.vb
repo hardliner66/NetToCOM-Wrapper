@@ -10,12 +10,12 @@ Imports System.Runtime.InteropServices
 
 <Assembly: AssemblyTitle("NetToCOM")> 
 <Assembly: AssemblyDescription("")> 
-<Assembly: AssemblyCompany("ELK Fertighaus AG")> 
+<Assembly: AssemblyCompany("NetToCOM")> 
 <Assembly: AssemblyProduct("NetToCOM")> 
-<Assembly: AssemblyCopyright("Copyright © ELK Fertighaus AG 2012")> 
+<Assembly: AssemblyCopyright("NetToCOM")> 
 <Assembly: AssemblyTrademark("")> 
 
-<Assembly: ComVisible(False)>
+<Assembly: ComVisible(True)> 
 
 'Die folgende GUID bestimmt die ID der Typbibliothek, wenn dieses Projekt für COM verfügbar gemacht wird
 <Assembly: Guid("cf022fd0-2e0d-4b13-841a-88fb4d2d62dc")> 

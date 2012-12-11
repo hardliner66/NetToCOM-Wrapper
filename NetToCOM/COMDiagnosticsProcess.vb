@@ -93,10 +93,10 @@ Public Class Process
 
   Public Property WindowStyle As COMProcessWindowStyle
     Get
-      Return _p.StartInfo.WindowStyle
+      Return CType(_p.StartInfo.WindowStyle, COMProcessWindowStyle)
     End Get
     Set(value As COMProcessWindowStyle)
-      _p.StartInfo.WindowStyle = value
+      _p.StartInfo.WindowStyle = CType(value, ProcessWindowStyle)
     End Set
   End Property
 
