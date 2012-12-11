@@ -1,5 +1,5 @@
 ﻿Option Strict On
-<ComClass(MemoryStream.ClassId, MemoryStream.InterfaceId, MemoryStream.EventsId)> _
+'<ComClass(MemoryStream.ClassId, MemoryStream.InterfaceId, MemoryStream.EventsId)> _
 Public Class MemoryStream
 #Region "COM-GUIDs"
   ' Diese GUIDs stellen die COM-Identität für diese Klasse 
@@ -15,33 +15,33 @@ Public Class MemoryStream
   ' über CreateObject erstellt werden.
   Public Sub New()
     MyBase.New()
-    MS = New IO.MemoryStream(Nothing, True)
+    ms = New IO.MemoryStream(Nothing, True)
   End Sub
 
   Private ms As IO.MemoryStream
 
   Public Function GetBuffer() As Byte()
-    Return MS.GetBuffer
+    Return ms.GetBuffer
   End Function
 
   Public Sub CreateStream(ByRef buffer() As Byte)
-    MS.Dispose()
-    MS = New IO.MemoryStream(buffer, True)
+    ms.Dispose()
+    ms = New IO.MemoryStream(buffer, True)
   End Sub
 
   Public Sub Write(ByRef buffer() As Byte, ByVal offset As Integer, ByVal count As Integer)
-    MS.Write(buffer, offset, count)
+    ms.Write(buffer, offset, count)
   End Sub
 
   Public Function Read(ByRef buffer() As Byte, ByVal offset As Integer, ByVal count As Integer) As Integer
-    Return MS.Read(buffer, offset, count)
+    Return ms.Read(buffer, offset, count)
   End Function
 
   Public Sub Dispose()
-    MS.Dispose()
+    ms.Dispose()
   End Sub
 
   Public Function ToMemoryStream() As IO.MemoryStream
-    Return MS
+    Return ms
   End Function
 End Class
